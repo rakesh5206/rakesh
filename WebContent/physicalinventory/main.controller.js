@@ -316,7 +316,8 @@ else if(evt.getSource().sId=="idmain1--inp_material")
                     	 valueLiveUpdate : true,
                     	 
                     	
-                     }),
+               }),
+               ///comment
                      new sap.m.Input({
                     	
                     	 showValueHelp : true,
