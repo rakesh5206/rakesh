@@ -1,0 +1,39 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+
+<TableSelectDialog
+title="Material"
+		noDataText="No Products Found"
+		contentWidth = "50%"
+		search="handleSearch"
+		confirm="handleClose"
+		cancel="handleClose"
+	items="{/results}"
+		>
+		<columns>
+				<Column>
+				<header>
+				<Text text="Material" />
+				</header>
+				</Column>
+				<Column>
+				<header>
+				<Text text="Name" />
+				</header>
+				</Column>
+		
+		</columns>
+		
+		<ColumnListItem>
+						<cells >
+							
+							<Text text="{matnr}"  />
+							
+							</cells>
+							<cells>
+							<Text text="{maktx}" />
+							
+						</cells>
+			</ColumnListItem>
+		
+		</TableSelectDialog>
+</core:FragmentDefinition>

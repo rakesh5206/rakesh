@@ -1,0 +1,186 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:u="sap.ui.unified"
+		controllerName="physicalinventory.main" xmlns:f="sap.ui.layout.form"  xmlns:l="sap.ui.layout" 
+		     xmlns:object="sap.uxap"   xmlns:html="http://www.w3.org/1999/xhtml">
+	<u:Shell >
+			<u:headItems>
+				<u:ShellHeadItem
+					tooltip="Configuration"
+					icon="sap-icon://home"
+					press="handlePressConfiguration" />
+				
+				
+			<!-- 	icon="physicalinventory/sapCompanyLogo.png" -->
+					 
+			
+			</u:headItems>
+			
+			<u:headEndItems icon="sap-icon://search">
+			
+				<u:ShellHeadItem
+					
+					icon="physicalinventory/globe.png"
+					
+					 />
+			</u:headEndItems>
+			
+			<u:user>
+				<u:ShellHeadUserItem
+					image="sap-icon://person-placeholder"
+					username="Rakesh"
+					press="handleUserItemPressed" />
+			</u:user>
+			
+			<u:search>
+			<Text text="AIRDIT Software Services Pvt Ltd" />
+			</u:search>
+			
+			<u:content>
+			
+			<Page title="Inventory Count" showNavButton="true" >
+		<content>
+		 
+													<f:SimpleForm >
+														<f:content>
+															<core:Title/>
+																<Label text="Date" class="sapUiSmallMarginTop" />
+																			<DatePicker/>
+																						
+																			<Label text="Plant"  class="sapUiSmallMarginTop"/>
+																			<Input
+																			id="inp_plant"
+																				type="Text"
+																				textFormatMode="KeyValue"
+																				placeholder="Enter Plant ..."
+																				showSuggestion="true"
+																				showValueHelp="true"
+																				valueHelpRequest="handleValueHelp"
+																				>
+																			
+																				</Input>
+																<core:Title />
+																<Label text="Store loc"  class="sapUiSmallMarginTop"/>
+																			<Input
+																				id="inp_storeloc"
+																				type="Text"
+																				textFormatMode="KeyValue"
+																				placeholder="Enter storage location ..."
+																				showSuggestion="true"
+																				showValueHelp="true"
+																				valueHelpRequest="handleValueHelp"
+																				></Input>
+																			<Label text="Special stock" class="sapUiSmallMarginTop"/>
+																			<Input
+																				id="inp_specialstock"
+																				type="Text"
+																				textFormatMode="KeyValue"
+																				placeholder="Enter Special stock..."
+																				showSuggestion="true"
+																				showValueHelp="true"
+																				valueHelpRequest="handleValueHelp"
+																				></Input>
+															</f:content>
+														</f:SimpleForm>
+														
+														 
+													<f:SimpleForm width ="100%">
+															<f:content>
+															
+														<Table id="tbl">
+															<columns >
+																<Column hAlign="Center">
+																		<Text text="Item" />
+																</Column >
+																<Column  hAlign="Center">
+																		<Text text="Material" />
+																</Column>
+																<Column  hAlign="Center">
+																		<Text text="Batch" />
+																</Column>
+																<Column  hAlign="Center">
+																		<Text text="Stock type" />
+																</Column>
+																<Column  hAlign="Center">
+																		<Text text="Quantity" />
+																</Column>
+																<Column hAlign="Center">
+																		<Text text="Scan/Remove" />
+																</Column>
+															</columns>
+															<items>
+																		<ColumnListItem>
+																			<cells width ="100%">
+																				<Text text="1" />
+																			</cells>
+																			<cells width ="100%">
+																				<Input
+																				id="inp_material"
+																				type="Text"
+																				textFormatMode="KeyValue"
+																				
+																				showSuggestion="true"
+																				showValueHelp="true"
+																				valueHelpRequest="handleValueHelp"
+																				></Input>
+																			</cells>
+																			<cells width ="100%">
+																				<Input
+																				id="inp_stock"
+																				type="Text"
+																				textFormatMode="KeyValue"
+																				
+																				showSuggestion="true"
+																				showValueHelp="true"
+																				valueHelpRequest="handleValueHelp"
+																				></Input>
+																			</cells>
+																			<cells width ="100%">
+																			<Input
+																				id="inp_batch"
+																				type="Text"
+																				textFormatMode="KeyValue"
+																				
+																				showSuggestion="true"
+																				showValueHelp="true"
+																				valueHelpRequest="handleValueHelp"
+																				></Input>
+																			</cells>
+																			<cells width ="100%">
+																			<Input
+																				
+																				
+																				/>
+																			</cells>
+																			
+																			
+																			
+																			<cells width ="100%">
+																			
+																			<Button icon="sap-icon://delete"/>
+																			</cells>
+																		</ColumnListItem>
+																	</items>
+														</Table>
+														</f:content>
+														</f:SimpleForm>
+													
+												
+	</content>
+		<footer>
+			            <OverflowToolbar >
+			                <ToolbarSpacer/>
+			                <Button icon="sap-icon://add" press="additem"/>
+			                <Button type="Accept" text="Submit" >
+			                
+			                    <layoutData><OverflowToolbarLayoutData moveToOverflow="false" /></layoutData>
+			                </Button>
+			                <Button type="Reject" text="Reset" ></Button>
+			                		 
+			            </OverflowToolbar>
+					</footer>
+					
+	</Page>
+			</u:content>
+			
+			
+		</u:Shell>
+</core:View>
